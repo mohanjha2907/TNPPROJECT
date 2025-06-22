@@ -39,7 +39,7 @@ function AdminPanel() {
       }
 
       const data = await response.json();
-      const link = `${window.location.origin}/public?shareToken=${data.shareToken}`;
+  const link = `${window.location.origin}/?shareToken=${data.shareToken}`;
       setShareLink(link);
     } catch (error) {
       console.error("Error generating share link:", error);
