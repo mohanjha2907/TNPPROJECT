@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import refreshToken from "../utils/refreshToken"; 
+import refreshToken from "../utils/refreshToken";
 
 function AdminPanel() {
   const [shareLink, setShareLink] = useState("");
@@ -39,7 +39,7 @@ function AdminPanel() {
       }
 
       const data = await response.json();
-  const link = `${window.location.origin}/?shareToken=${data.shareToken}`;
+      const link = `${window.location.origin}/public?shareToken=${data.shareToken}`;
       setShareLink(link);
     } catch (error) {
       console.error("Error generating share link:", error);
