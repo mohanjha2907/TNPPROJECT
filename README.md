@@ -1,13 +1,31 @@
-# React + Vite
+# TNP Project – Admin Panel with Share Token Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#LIVE DEMO (http://tnpproject.vercel.app)
 
-Currently, two official plugins are available:
+This is a React + Vite web application designed to support authenticated admin users in generating secure, shareable links for recruitment use. It integrates with a backend API and supports token-based access sharing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## Expanding the ESLint configuration
+- Modern UI with Tailwind CSS styling
+-  JWT-based authentication flow
+-  Automatic token refreshing via `refreshToken()`
+-  Share link generation via backend API
+-  Dynamic display of candidate data in a styled table
+-  Deployed with Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Project Structure
 
+- src/ ---Component/ ---AdminPanel /---Login /---PublicShare
+
+--src/-- Pages/ ---AdminPanelPage /---LoginPage /---PublicSharePage
+
+--src/-- utils/---refreshToken
+
+
+
+##  Tech Stack
+
+- **Frontend**: React, Tailwind CSS, React Router DOM, Vite
+- **Backend**: Express.js (separate repo or hosted API)
+- **Auth**: Bearer token with refresh token fallback
+- **Hosting**: Vercel (frontend), Render/other (backend)
